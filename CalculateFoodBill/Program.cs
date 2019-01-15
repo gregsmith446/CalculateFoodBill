@@ -15,7 +15,9 @@ using System;
 class Solution
 {
 
-    // Complete the solve function below.
+    // The solve function below takes as input the price of a meal, the tip percent, and the tax percent
+    // and outputs the total cost of the meal, the sum of meal price, tip percent, and tax percent.
+
     static void solve(double meal_cost, int tip_percent, int tax_percent)
     {
         double totalCost = 0;
@@ -28,11 +30,13 @@ class Solution
 
         totalCost = (meal_cost + actualTip + actualTax);
 
-        Console.Write("The tip as decimal is {0} and the tax as decimal is {1}.", decimalTip, decimalTax);
-
         Console.WriteLine("The total cost of the meal is {0}.", totalCost);
 
-        // ALL YOU NEED TO DO IS ROUND THE TOTAL TO AN INT NO DECIMALS
+        int roundedTotal = Convert.ToInt32(totalCost);
+
+        Console.WriteLine("The tip as decimal is {0} and the tax as decimal is {1}.", decimalTip, decimalTax);
+
+        Console.WriteLine("The ROUNDED total cost of the meal is {0}.", roundedTotal);
     }
 
     static void Main(string[] args)
